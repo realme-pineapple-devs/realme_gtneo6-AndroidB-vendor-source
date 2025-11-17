@@ -245,12 +245,6 @@ static int rt_info_show(struct seq_file *m, void *v)
 
 			len += snprintf(page + len, RESULT_PAGE_SIZE - len, "%d;%s;%u\n",
 				results[i].pid, task_name, results[i].wake_count);
-#ifdef CONFIG_HMBIRD_SCHED
-			/* only mark top 5 */
-			if (i < 5) {
-				sched_set_sched_prop(results[i].task, SCHED_PROP_DEADLINE_LEVEL3);
-			}
-#endif /* CONFIG_HMBIRD_SCHED */
 		}
 	}
 

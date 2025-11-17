@@ -23,13 +23,7 @@ def define_oplus_local_modules():
             "task_boost/boost_proc.c",
             "critical_task_boost.c",
         ]),
-        conditional_srcs = {
-            "CONFIG_HMBIRD_SCHED": {
-                True:  [
-                    "es4g_assist.c",
-                ],
-            },
-        },
+
         includes = ["."],
         copts = select({
             "//build/kernel/kleaf:kocov_is_true": ["-fprofile-arcs", "-ftest-coverage"],

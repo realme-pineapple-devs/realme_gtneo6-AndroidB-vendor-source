@@ -10,9 +10,7 @@
 
 #include "game_ctrl.h"
 #include "yield_opt.h"
-#ifdef CONFIG_HMBIRD_SCHED
-#include "es4g_assist.h"
-#endif /* CONFIG_HMBIRD_SCHED */
+
 #include "frame_sync.h"
 #include "task_boost/heavy_task_boost.h"
 #include "critical_task_boost.h"
@@ -47,9 +45,6 @@ static int __init game_ctrl_init(void)
 	rt_info_init();
 	fake_cpufreq_init();
 	debug_init();
-#if defined(CONFIG_HMBIRD_SCHED)
-	es4g_assist_init();
-#endif /* CONFIG_HMBIRD_SCHED */
 	yield_opt_init();
 	frame_sync_init();
 	heavy_task_boost_init();
@@ -60,10 +55,6 @@ static int __init game_ctrl_init(void)
 
 static void __exit game_ctrl_exit(void)
 {
-#if defined(CONFIG_HMBIRD_SCHED)
-	es4g_assist_exit();
-#endif /* CONFIG_HMBIRD_SCHED */
-
 	heavy_task_boost_exit();
 	hrtimer_boost_exit();
 }
