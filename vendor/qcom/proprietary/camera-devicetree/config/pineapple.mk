@@ -8,42 +8,37 @@ dtbo-$(CONFIG_ARCH_PINEAPPLE)	+= pineapple-camera-v2.dtbo \
 				   pineapple-camera-sensor-aim500.dtbo
 endif
 #OPLUS_DTS_OVERLAY start
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/waffle-camera-overlay.dtbo \
+dtbo-$(CONFIG_WAFFLE_DTB) += oplus/waffle-camera-overlay.dtbo \
+                              oplus/waffle-camera-overlay-evb.dtbo
 
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/waffle-camera-overlay-evb.dtbo \
+dtbo-$(CONFIG_PANGU_DTB) += oplus/pangu-camera-overlay.dtbo \
+			     oplus/pangu-camera-overlay-evb.dtbo \
+			     oplus/pangu-camera-overlay-t0.dtbo
 
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/pangu-camera-overlay.dtbo \
+dtbo-$(CONFIG_ENZO_DTB) += oplus/enzo-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/enzo-camera-overlay.dtbo \
+dtbo-$(CONFIG_CAIHONG_DTB) += oplus/caihong-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/pangu-camera-overlay-evb.dtbo \
+dtbo-$(CONFIG_CORVETTE_DTB) += oplus/corvette-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/pangu-camera-overlay-t0.dtbo \
+dtbo-$(CONFIG_DIVO_DTB)    += oplus/divo-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/caihong-camera-overlay.dtbo \
-
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/corvette-camera-overlay.dtbo \
-
-dtbo-$(CONFIG_ARCH_CLIFFS)    += oplus/divo-camera-overlay.dtbo \
-
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/giulia-camera-overlay.dtbo \
-
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/giuliaC-camera-overlay.dtbo \
+dtbo-$(CONFIG_GIULIA_DTB) += oplus/giulia-camera-overlay.dtbo \
+                              oplus/giuliaC-camera-overlay.dtbo
 #OPLUS_DTS_OVERLAY end
 
 dtbo-$(CONFIG_ARCH_CLIFFS)    += cliffs-camera.dtbo
 #OPLUS_DTS_OVERLAY start
-dtbo-$(CONFIG_ARCH_CLIFFS)    += oplus/audi-camera-overlay.dtbo \
+dtbo-$(CONFIG_AUDI_DTB)    += oplus/audi-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_CLIFFS)    += oplus/bale-camera-overlay.dtbo \
+dtbo-$(CONFIG_BALE_DTB)    += oplus/bale-camera-overlay.dtbo \
+                               oplus/baleC-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_CLIFFS)    += oplus/baleC-camera-overlay.dtbo \
+dtbo-$(CONFIG_KAITIAN_DTB) += oplus/kaitian-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_PINEAPPLE) += oplus/kaitian-camera-overlay.dtbo \
+dtbo-$(CONFIG_AVALON_DTB)    += oplus/avalon-camera-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_CLIFFS)    += oplus/avalon-camera-overlay.dtbo \
-
-dtbo-$(CONFIG_ARCH_CLIFFS)    += oplus/lexus-camera-overlay.dtbo \
+dtbo-$(CONFIG_LEXUS_DTB)    += oplus/lexus-camera-overlay.dtbo
 
 #OPLUS_DTS_OVERLAY end
 ifneq ($(CONFIG_OPLUS_DEVICE_DTBS), y)
